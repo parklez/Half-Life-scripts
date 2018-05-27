@@ -121,12 +121,13 @@ Example: bind mouse3 +ds
 
 #### Double Duck OpenAG
 ```
-alias ds1 "+duck;alias ds ds2;append ds"
-alias ds2 "wait;alias ds ds3;append ds"
-alias ds3 "-duck;alias ds ds4;append ds"
-alias ds4 "wait;alias ds ds1;append ds"
-alias +ds "cl_autojump 0;ds1"
-alias -ds "alias ds;-duck;cl_autojump 1"
+alias dd1 "+duck;alias dd dd2;append dd"
+alias dd2 "wait;alias dd dd3;append dd"
+alias dd3 "-duck;alias dd dd4;append dd"
+alias dd4 "wait;alias dd dd5;append dd"
+alias dd5 +duck
+alias +dd dd1
+alias -dd "alias dd;-duck"
 ```
 Example: bind mouse3 +dd
 
