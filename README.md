@@ -110,19 +110,36 @@ Example: bind mouse5 +tau
 
 #### Duckroll OpenAG
 ```
-alias +duckroll "alias _zpecial auduck;auduck"
-alias -duckroll "alias _zpecial"
-alias auduck "+duck;wait;-duck;wait;zpecial"
+alias ds1 "+duck;alias ds ds2;append ds"
+alias ds2 "wait;alias ds ds3;append ds"
+alias ds3 "-duck;alias ds ds4;append ds"
+alias ds4 "wait;alias ds ds1;append ds"
+alias +ds "cl_autojump 0;ds1"
+alias -ds "alias ds;-duck;cl_autojump 1"
 ```
-Example: bind mouse3 +duckroll
+Example: bind mouse3 +ds
+
+#### Double Duck OpenAG
+```
+alias ds1 "+duck;alias ds ds2;append ds"
+alias ds2 "wait;alias ds ds3;append ds"
+alias ds3 "-duck;alias ds ds4;append ds"
+alias ds4 "wait;alias ds ds1;append ds"
+alias +ds "cl_autojump 0;ds1"
+alias -ds "alias ds;-duck;cl_autojump 1"
+```
+Example: bind mouse3 +dd
 
 #### Use Spam OpenAG
 ```
-alias +usespam "alias _zpecial usespam;usespam"
-alias -usespam "alias _zpecial"
-alias usespam "+use;wait;-use;wait;zpecial"
+alias us1 "+use;alias us us2;append us"
+alias us2 "wait;alias us us3;append us"
+alias us3 "-use;alias us us4;append us"
+alias us4 "wait;alias us us1;append us"
+alias +us us1
+alias -us "alias us;-use"
 ```
-Example: bind e +usespam
+Example: bind e +us
 
 ### Counter-Strike 1.6
 
