@@ -19,7 +19,7 @@ If the console says "unknown command bxt_append", make sure Bunnymod XT is injec
   * [Use Spam](#use-spam-bxt)
   * [Object Boosting](#object-boosting-bxt)
   * [Gauss Boosting](#gauss-180-boosting)
-  * [Quickgauss]
+  * [Quickgauss](#quickgauss-180-steam-bxt)
   * [Nade Boosting](#nade-boosting)
   * [SMG Nade Boosting](#smg-boosting)
 * [HLDM/OpenAG](#half-life-multiplayer--openag)
@@ -106,7 +106,7 @@ Example: bind mouse5 in_nade
 ```
 alias smgboost "cl_pitchup -89;cl_pitchdown 89;w;+attack2;+jump;w;-attack2;-jump;cl_pitchup 89;cl_pitchdown 89;force_centerview"
 ```
-How to use: Crouch for a few frames and activate it, this will boost the player vertically, useful on surface tension.
+How to use: Crouch for a few frames and activate it, this will boost the player vertically, useful on surface tension.\
 Example: bind g smgboost
 
 ### Half-Life Multiplayer / OpenAG
