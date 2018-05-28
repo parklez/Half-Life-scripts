@@ -15,11 +15,13 @@ If the console says "unknown command bxt_append", make sure Bunnymod XT is injec
 ### Table of Contents
 * [Movement](#1-movement--misc)
   * [Bunnyhop/Autojump](#bunnyhop-bxt)
-  * [Duckroll/Duck spam](#duck-spam-bxt)
+  * [Duckroll/Duck Spam](#duck-spam-bxt)
   * [Use Spam](#use-spam-bxt)
   * [Object Boosting](#object-boosting-bxt)
   * [Gauss Boosting](#gauss-180-boosting)
+  * [Quickgauss]
   * [Nade Boosting](#nade-boosting)
+  * [SMG Nade Boosting](#smg-boosting)
 * [HLDM/OpenAG](#half-life-multiplayer--openag)
 * [Counter-Strike 1.6](#counter-strike-16)
 * [Opposing Force](#opposing-force)
@@ -76,8 +78,16 @@ alias -tau "_taubo;alias _taubo"
 ```
 Example: bind mouse5 +tau
 
-##### QuickGauss Steam BXT
-`quickgauss.cfg` TODO
+#### Quickgauss 180° Steam BXT
+*Important note: quickgauss is a trick ONLY possible on the steam version of the game, NOT WON.*
+
+How to use:
+1. Copy `quickgauss.cfg` to your `valve` dir.
+2. Type in console: `exec quickgauss.cfg`.
+3. Make a bind for *+gauss*, example: `bind mouse4 +gauss`.
+4. Press the bind and be prepared for the discharge after ~400ms.
+
+When you use the bind, a single gauss cell is charged, a save and load happens and the script will time the 180° based on average results, which is a 6 frame gap.
 
 #### Nade Boosting
 
@@ -91,6 +101,13 @@ alias in_nade "cl_pitchdown -35;cl_pitchup 35;+duck;+jump;w;-attack;w 15;-jump;-
 ```
 How to use: Walk forward and activate.\
 Example: bind mouse5 in_nade
+
+#### SMG Boosting
+```
+alias smgboost "cl_pitchup -89;cl_pitchdown 89;w;+attack2;+jump;w;-attack2;-jump;cl_pitchup 89;cl_pitchdown 89;force_centerview"
+```
+How to use: Crouch for a few frames and activate it, this will boost the player vertically, useful on surface tension.
+Example: bind g smgboost
 
 ### Half-Life Multiplayer / OpenAG
 
