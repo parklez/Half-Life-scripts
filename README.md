@@ -7,7 +7,7 @@ Special thanks to nin_talal, vitosnatios1 and YaLTeR.
 ### How to Install
 1. Inject Bunnymod XT [link](https://github.com/YaLTeR/BunnymodXT)
 2. Create a `userconfig.cfg` in your mod dir (valve, valve_WON, gearbox_WON, cstrike, etc)
-3. Copy and paste the code into `userconfig.cfg` using notepad or similar then save.
+3. Copy and paste the script code into `userconfig.cfg` using notepad or similar then save.
 4. In-game open the console and type `exec userconfig.cfg`
 
 If the console says "unknown command bxt_append", make sure Bunnymod XT is injected. If it says "couldn't exec userconfig.cfg", make sure the file exists and that you're playing on the right folder.
@@ -15,7 +15,7 @@ If the console says "unknown command bxt_append", make sure Bunnymod XT is injec
 ### Table of Contents
 * [Movement](#1-movement--misc)
   * [Bunnyhop/Autojump](#bunnyhop-bxt)
-  * [Duckroll/Duck Spam](#duck-spam-bxt)
+  * [Duckroll/Duck Spam](#duckroll-bxt)
   * [Use Spam](#use-spam-bxt)
   * [Object Boosting](#object-boosting-bxt)
   * [Gauss Boosting](#gauss-180-boosting)
@@ -45,7 +45,7 @@ alias @bhop "+jump;wait;-jump;wait;bxt_append _zspecial"
 ```
 Example: bind space +bhop
 
-#### Duck Spam BXT
+#### Duckroll BXT
 *For optimal movement consider using **'+bxt_tas_ducktap'***
 ```
 alias +duckspam "alias _zspecial @duckspam;@duckspam"
@@ -63,11 +63,26 @@ alias @usespam "+use;wait;-use;wait;bxt_append _zspecial"
 Example: bind k +usespam
 
 #### Object Boosting BXT
+
+##### 2000 units/s boost (fastest)
 ```
 alias "obbo" "+use;w 12;-use;+jump;wait;-jump"
 ```
-How to use: While facing the object, move either left or right as you activate this script. Changing the number after 'w' will affect the boost, values around 6 to 16 are good.\
 Example: bind e obbo
+
+##### 800 units/s boost (average)
+```
+alias "obbo800" "+use;w 7;-use;+jump;wait;-jump"
+```
+Example bind e obbo800
+
+##### "On a Rails" forward obbo with shotgun
+```
+alias obboshoot "+use;w 10;-use;+attack2;+jump;w;-attack2;-jump"
+```
+Example: bind mouse5 obboshoot
+
+How to use: While facing the object, move either left or right as you activate this script. Changing the number after 'w' will affect the boost, values around 6 to 16 are good.\
 
 #### Gauss 180° Boosting
 ```

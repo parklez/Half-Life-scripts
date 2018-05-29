@@ -10,7 +10,7 @@ def jb(fps, waits):
         script += 'alias jb' + str(i) + ' "w;alias @jb jb' + str(i+1) + ';bxt_append _jb"\n'
         i += 1
 
-    script += 'alias jb' + str(i) + ' "+duck;w 5;say jumpbug!;-duck;+jump;w;-jump;alias @jb;cmd name"\n\n'
+    script += 'alias jb' + str(i) + ' "+duck;w 5;say jumpbug!;-duck;+jump;w;-jump;alias @jb"\n\n'
     script += 'alias +jumpbug "alias _jb @jb;jb1"\n'
     script += 'alias -jumpbug "alias _jb;fps_max 100"'
     print(script)
