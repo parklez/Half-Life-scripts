@@ -7,7 +7,7 @@ Special thanks to nin_talal, vitosnatios1 and YaLTeR.
 ### How to Install
 1. Inject Bunnymod XT [link](https://github.com/YaLTeR/BunnymodXT)
 2. Create a `userconfig.cfg` in your mod dir (valve, valve_WON, gearbox_WON, cstrike, etc)
-3. Copy and paste the script code into `userconfig.cfg` using notepad or similar then save.
+3. Copy and paste the script code into `userconfig.cfg` (including a bind of your choice) using notepad and save.
 4. In-game open the console and type `exec userconfig.cfg`
 
 If the console says "unknown command bxt_append", make sure Bunnymod XT is injected. If it says "couldn't exec userconfig.cfg", make sure the file exists and that you're playing on the right folder.
@@ -39,28 +39,37 @@ If the console says "unknown command bxt_append", make sure Bunnymod XT is injec
 #### Bunnyhop BXT
 *Use BunnymodXT's **'bxt_autojump 1'** instead.*
 ```
-alias +bhop "alias _zspecial @bhop;@bhop"
+alias +bhop "alias _zspecial @bhop;@bh1"
 alias -bhop "alias _zspecial;-jump"
-alias @bhop "+jump;wait;-jump;wait;bxt_append _zspecial"
+alias @bh1 "+jump;alias @bhop @bh2;bxt_append _zspecial"
+alias @bh2 "w;alias @bhop @bh3;bxt_append _zspecial"
+alias @bh3 "-jump;alias @bhop @bh4;bxt_append _zspecial"
+alias @bh4 "w;alias @bhop @bh1;bxt_append _zspecial"
 ```
-Example: bind space +bhop
+Example: `bind space +bhop`
 
 #### Duckroll BXT
 *For optimal movement consider using **'+bxt_tas_ducktap'***
 ```
-alias +duckspam "alias _zspecial @duckspam;@duckspam"
-alias -duckspam "alias _zspecial"
-alias @duckspam "+duck;wait;-duck;wait;bxt_append _zspecial"
+alias +duckroll "alias _zspecial @duck;@dr1"
+alias -duckroll "alias _zspecial;-duck"
+alias @dr1 "+duck;alias @duck @dr2;bxt_append _zspecial"
+alias @dr2 "w;alias @duck @dr3;bxt_append _zspecial"
+alias @dr3 "-duck;alias @duck @dr4;bxt_append _zspecial"
+alias @dr4 "w;alias @duck @dr1;bxt_append _zspecial"
 ```
-Example: bind mouse3 +duckspam
+Example: `bind mouse3 +duckroll`
 
 #### Use Spam BXT
 ```
-alias +usespam "alias _zspecial @usespam;@usespam"
-alias -usespam "alias _zspecial"
-alias @usespam "+use;wait;-use;wait;bxt_append _zspecial"
+alias +usespam "alias _zspecial @use;@use1"
+alias -usespam "alias _zspecial;-use"
+alias @use1 "+use;alias @use @use2;bxt_append _zspecial"
+alias @use2 "w;alias @use @use3;bxt_append _zspecial"
+alias @use3 "-use;alias @use @use4;bxt_append _zspecial"
+alias @use4 "w;alias @use @use1;bxt_append _zspecial"
 ```
-Example: bind k +usespam
+Example: `bind k +usespam`
 
 #### Object Boosting BXT
 
@@ -68,21 +77,21 @@ Example: bind k +usespam
 ```
 alias "obbo" "+use;w 12;-use;+jump;wait;-jump"
 ```
-Example: bind e obbo
+Example: `bind e obbo`
 
 ##### 800 units/s boost (average)
 ```
 alias "obbo800" "+use;w 7;-use;+jump;wait;-jump"
 ```
-Example bind e obbo800
+Example: `bind e obbo800`
 
 ##### "On a Rails" forward obbo with shotgun
 ```
 alias obboshoot "+use;w 10;-use;+attack2;+jump;w;-attack2;-jump"
 ```
-Example: bind mouse5 obboshoot
+Example: `bind mouse5 obboshoot`
 
-How to use: While facing the object, move either left or right as you activate this script. Changing the number after 'w' will affect the boost, values around 6 to 16 are good.\
+How to use: While facing the object, move either left or right as you activate this script. Changing the number after 'w' will affect the boost, values around 6 to 16 are good.
 
 #### Gauss 180° Boosting
 ```
@@ -91,7 +100,7 @@ alias _taubofunc "cl_pitchup 180;cl_pitchdown -180;-attack2;wait;cl_pitchup 89;c
 alias +tau "+attack2;alias _taubo _taubofunc"
 alias -tau "_taubo;alias _taubo"
 ```
-Example: bind mouse5 +tau
+Example: `bind mouse5 +tau`
 
 #### Quickgauss 180° Steam BXT
 *Important note: quickgauss is a trick ONLY possible on the steam version of the game, NOT WON.*
@@ -115,14 +124,14 @@ alias bp_nade "cl_pitchdown 85;cl_pitchup -85;+duck;+jump;wait;-attack;w 15;-jum
 alias in_nade "cl_pitchdown -35;cl_pitchup 35;+duck;+jump;w;-attack;w 15;-jump;-duck;cl_pitchup 89;cl_pitchdown 89;force_centerview"
 ```
 How to use: Walk forward and activate.\
-Example: bind mouse5 in_nade
+Example: `bind mouse5 in_nade`
 
 #### SMG Boosting
 ```
 alias smgboost "cl_pitchup -89;cl_pitchdown 89;w;+attack2;+jump;w;-attack2;-jump;cl_pitchup 89;cl_pitchdown 89;force_centerview"
 ```
 How to use: Crouch for a few frames and activate it, this will boost the player vertically, useful on surface tension.\
-Example: bind g smgboost
+Example: `bind g smgboost`
 
 ### Half-Life Multiplayer / OpenAG
 
@@ -131,14 +140,14 @@ Example: bind g smgboost
 ```
 alias fastzoom "+attack2;+attack;wait;wait;wait;wait;lastinv;lastinv;-attack;-attack2"
 ```
-Example: bind mouse5 fastzoom
+Example: `bind mouse5 fastzoom`
 
 #### Backwards Gauss Boosting
 ```
 alias +tau "weapon_gauss;wait;+attack2"
 alias -tau "cl_pitchup 270;cl_pitchspeed 21500;fps_max 60;wait;+lookup;wait;-lookup;-attack2;wait;+lookdown;wait;-lookdown;cl_pitchup 89;fps_max 100"
 ```
-Example: bind mouse5 +tau
+Example: `bind mouse5 +tau`
 
 #### Duckroll OpenAG
 ```
@@ -149,7 +158,7 @@ alias ds4 "wait;alias ds ds1;append ds"
 alias +ds "cl_autojump 0;ds1"
 alias -ds "alias ds;-duck;cl_autojump 1"
 ```
-Example: bind mouse3 +ds
+Example: `bind mouse3 +ds`
 
 #### Double Duck OpenAG
 ```
@@ -161,7 +170,7 @@ alias dd5 +duck
 alias +dd dd1
 alias -dd "alias dd;-duck"
 ```
-Example: bind mouse3 +dd
+Example: `bind mouse3 +dd`
 
 #### Use Spam OpenAG
 ```
@@ -172,7 +181,7 @@ alias us4 "wait;alias us us1;append us"
 alias +us us1
 alias -us "alias us;-use"
 ```
-Example: bind e +us
+Example: `bind e +us`
 
 ### Counter-Strike 1.6
 
@@ -180,7 +189,7 @@ Example: bind e +us
 ```
 alias fastswitch "+attack2;wait;wait;wait;-attack2;+attack;wait;wait;wait;-attack;lastinv;wait;lastinv"
 ```
-Example: bind mouse4 fastswitch
+Example: `bind mouse4 fastswitch`
 
 #### Auto Fire BXT
 ```
@@ -188,7 +197,7 @@ alias +aps "alias _aps @aps;@aps"
 alias -aps "alias _aps"
 alias @aps "+attack;wait;-attack;wait;bxt_append _aps"
 ```
-Example: bind mouse5 +aps
+Example: `bind mouse5 +aps`
 
 #### Fast Walk BXT
 *Also known as "ground strafe".*
@@ -197,7 +206,7 @@ alias "+fr" "alias _fr @fr;cl_yawspeed 0;@fr"
 alias "-fr" "alias _fr;cl_yawspeed 210"
 alias "@fr" "+left;+moveleft;w;-left;-moveleft;+right;+moveright;w;-right;-moveright;bxt_append _fr"
 ```
-Example: bind f +fr
+Example: `bind f +fr`
 
 ### Opposing Force
 
@@ -215,17 +224,18 @@ alias @m249_6 "w;alias @m249 @m249_7;bxt_append _zspecial"
 alias @m249_7 "w;alias @m249 @m249_8;bxt_append _zspecial"
 alias @m249_8 "w;alias @m249 @m249_1;bxt_append _zspecial"
 ```
-Example bind mouse5 +m249
+Example `bind mouse5 +m249`
 
 #### Throwing nades below the door on "Friendly Fire"
 *Also works on They Hunger 1.*
 ```
 alias door "fps_max 19.5;cl_pitchdown 60.5;cl_pitchup -60.5;+duck;w 5;fps_max 19.5;+attack;w;-attack;w 25;+attack;w;-attack;w 15;fps_max 99.5;-duck;cl_pitchup 89;cl_pitchdown 89"
 ```
-Example: bind g door
+Example: `bind g door`
 
 ### 2. Scripted Sequences
-All of them require Bunnymod XT [link](https://github.com/YaLTeR/BunnymodXT) and must be done at 100 fps.
+All of them require Bunnymod XT [link](https://github.com/YaLTeR/BunnymodXT) and must be done at stable 100 fps, if your computer struggles to keep up, scripts will fail. \
+Note that you can retry a sequence by executing `userconfig.cfg`.
 
 #### Test Chamber A
 *This version is currently NOT allowed by speedrun.com/hl1 rules.*
@@ -313,7 +323,7 @@ After touching the level change trigger up there you may continue:
 ```
 alias puskip "-jump;-moveright;-moveleft;speak fvox/power_level_is;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;cl_pitchdown 180;cl_pitchup -179;w 30;cl_pitchup -30;cl_pitchdown 31;wait;cl_pitchup 89;cl_pitchdown 89;w 10;+use;w 11;-use;+jump;wait;-jump"
 ```
-How to use: [link](https://youtu.be/hxoo7HOKPXI)
+How to use: TODO
 
 #### Power Up B
 *Facing forward, no object boost.*
@@ -362,7 +372,7 @@ alias v3 "w 125;alias valve v1"
 
 bind 6 valve
 ```
-How to use: link soon
+How to use: ???
 
 1. 6
 2. W+A+6
@@ -372,7 +382,7 @@ How to use: link soon
 ```
 alias faf "save quick;speak fvox/power_level_is.beep._comma.beep._comma.beep._comma.beep;-moveright;-moveleft;-duck;weapon_crowbar;+attack;w 500;weapon_handgrenade;w 40;cl_pitchdown 180;cl_pitchup -179;w 40;cl_pitchup 89.999;cl_pitchdown 89.999;cl_pitchup -40;cl_pitchdown 40.001;w 30;-attack;w 4;+jump;+duck;wait;-jump;-duck;cl_pitchup 89;cl_pitchdown 89;w 61"
 ```
-How to use: [link](https://youtu.be/hxoo7HOKPXI)
+How to use: TODO
 
 #### Forget About Freeman B
 *This version uses a smg nade to scare the vortigaunts off.*
@@ -389,7 +399,7 @@ alias in_dboost "-forward;cl_pitchdown 89;cl_pitchup -89;-attack;w;+duck;+jump;w
 How to use: link soon
 
 ### 3. Jumpbugs BXT
-FPS values used are pre-steampipe, if `version` in your console outputs `Exe build: [...]` from 2013 or later, subtract 0.5 fps from `fps_max` values within the script in order to work.
+FPS values used are pre-steampipe, if `version` in your console outputs `Exe build: [...]` from 2013 or later, subtract 0.5 fps from `fps_max` values within the script in order to work.\
 Spreadsheet by Jukspa [link](https://docs.google.com/spreadsheets/d/1AREhZEdayLHF6bJpSCtpFVtM-foPVs6e8nHFuvAXsPw/edit?usp=sharing)
 
 How to use:
