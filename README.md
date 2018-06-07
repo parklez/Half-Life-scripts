@@ -10,7 +10,8 @@ Special thanks to nin_talal, vitosnatios1 and YaLTeR.
 3. Copy and paste the script code into `userconfig.cfg` (including a bind of your choice) using notepad and save.
 4. In-game open the console and type `exec userconfig.cfg`
 
-If the console says "unknown command bxt_append", make sure Bunnymod XT is injected. If it says "couldn't exec userconfig.cfg", make sure the file exists and that you're playing on the right folder.
+### Issues
+Please visit the [Wiki page] for helpful information on scripting and performance issues.
 
 ### Table of Contents
 * [Movement](#1-movement--misc)
