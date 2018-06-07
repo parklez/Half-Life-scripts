@@ -11,7 +11,7 @@ Special thanks to nin_talal, vitosnatios1 and YaLTeR.
 4. In-game open the console and type `exec userconfig.cfg`
 
 ### Issues
-Please visit the [Wiki page](https://github.com/parklez/Half-Life-Scripts/wiki) for helpful information on scripting and performance issues!\
+**Please visit the [Wiki page](https://github.com/parklez/Half-Life-Scripts/wiki) for helpful information on scripting and performance issues!**\
 If the console says `unknown command bxt_append`, make sure Bunnymod XT is injected.\
 If it says `couldn't exec userconfig.cfg`, make sure the file exists on your mod dir (valve, valve_WON or similar).
 
