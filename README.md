@@ -10,10 +10,8 @@ Special thanks to nin_talal, vitosnatios1 and YaLTeR.
 3. Copy and paste the script code into `userconfig.cfg` (including a bind of your choice) using notepad and save.
 4. In-game open the console and type `exec userconfig.cfg`
 
-### Issues
-**Please visit the [Wiki page](https://github.com/parklez/Half-Life-Scripts/wiki) for helpful information on scripting and performance issues!**\
-If the console says `unknown command bxt_append`, make sure Bunnymod XT is injected.\
-If it says `couldn't exec userconfig.cfg`, make sure the file exists on your mod dir (valve, valve_WON or similar).
+### Issues and Help
+**Please visit the [Wiki page](https://github.com/parklez/Half-Life-Scripts/wiki) for helpful information on scripting, performance tips and common issues!**
 
 ### Table of Contents
 * [Movement](#1-movement--misc)
@@ -40,7 +38,7 @@ If it says `couldn't exec userconfig.cfg`, make sure the file exists on your mod
 ### 1. Movement & Misc
 
 #### Bunnyhop BXT
-*Use BunnymodXT's **'bxt_autojump 1'** instead.*
+*Use BunnymodXT's **"bxt_autojump 1"** instead.*
 ```
 alias +bhop "alias _zspecial @bhop;@bh1"
 alias -bhop "alias _zspecial;-jump"
@@ -52,7 +50,7 @@ alias @bh4 "w;alias @bhop @bh1;bxt_append _zspecial"
 Example: `bind space +bhop`
 
 #### Duckroll BXT
-*For optimal movement consider using **'+bxt_tas_ducktap'***
+*For optimal movement consider using **"+bxt_tas_ducktap"***
 ```
 alias +duckroll "alias _zspecial @duck;@dr1"
 alias -duckroll "alias _zspecial;-duck"
@@ -237,8 +235,8 @@ alias door "fps_max 19.5;cl_pitchdown 60.5;cl_pitchup -60.5;+duck;w 5;fps_max 19
 Example: `bind g door`
 
 ### 2. Scripted Sequences
-All of them require Bunnymod XT [link](https://github.com/YaLTeR/BunnymodXT) and must be done at stable 100 fps, if your computer struggles to keep up, scripts will fail. \
-Note that you can retry a sequence by executing `userconfig.cfg`.
+All sequences require Bunnymod XT [link](https://github.com/YaLTeR/BunnymodXT) and must be done at stable 100 fps, if your computer struggles to keep up, scripts will fail. Check possible solutions on the wiki [link](https://github.com/parklez/Half-Life-Scripts/wiki). For scripts requiring angles, use `bxt_hud_viewangles 1`.\
+Tip: In case something goes wrong, `exec userconfig.cfg` and try again.
 
 #### Test Chamber A
 *This version is currently NOT allowed by speedrun.com/hl1 rules.*
@@ -294,7 +292,7 @@ How to use: Stay on the left corner between cart cage and wall, when the cage st
 4. hold 9+0 then release
 
 #### Test Chamber D
-*This is likely the best version, offers an edge bug to cancel fall damage.*
+*Probably the "best" version, it offers an edge bug to cancel fall damage.*
 ```
 alias testchamber "tc1"
 alias move "+moveright"
@@ -406,10 +404,10 @@ FPS values used are pre-steampipe, if `version` in your console outputs `Exe bui
 Spreadsheet by Jukspa [link](https://docs.google.com/spreadsheets/d/1AREhZEdayLHF6bJpSCtpFVtM-foPVs6e8nHFuvAXsPw/edit?usp=sharing)
 
 How to use:
-1. Download this repository clicking [here](https://github.com/parklez/Half-Life-Scripts/archive/master.zip) then move the script you want inside the mod dir (gearbox_WON, valve_WON, etc)
+1. Download this repository clicking [here](https://github.com/parklez/Half-Life-Scripts/archive/master.zip) then move the script you want inside the mod dir (valve, valve_WON, gearbox_WON, etc).
 2. Load the script you want: `bind F2 "exec jb_example.cfg"` OR type in console `exec jb_example.cfg`
-3. Make a bind for *+jumpbug*: `bind mouse4 +jumpbug`
-4. Hold *+jumpbug* until it's over, you can move/attack freely.
+3. Make a bind for "+jumpbug": `bind mouse4 +jumpbug`
+4. Hold down "+jumpbug" until it's over, you can move/attack freely. The script jumps and jumpbugs automatically.
 
 **Video showcase for most jumpbugs: [link](https://youtu.be/dxPG7A0w3aU)**
 
