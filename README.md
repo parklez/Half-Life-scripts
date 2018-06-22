@@ -7,7 +7,7 @@ Special thanks to nin_talal, vitosnatios1 and YaLTeR.
 ### How to Install
 1. Inject Bunnymod XT [link](https://github.com/YaLTeR/BunnymodXT)
 2. Create a `userconfig.cfg` in your mod dir (valve, valve_WON, gearbox_WON, cstrike, etc)
-3. Copy and paste the script code into `userconfig.cfg` (including a bind of your choice) using notepad and save.
+3. Copy and paste the script code into `userconfig.cfg` (including a bind of your choice, check availability [here](https://github.com/parklez/Half-Life-Scripts/wiki/Keyboard-Mouse-Keys)) using notepad and save.
 4. In-game open the console and type `exec userconfig.cfg`
 
 ### Issues and Help
