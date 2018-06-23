@@ -26,7 +26,7 @@ Special thanks to nin_talal, vitosnatios1 and YaLTeR.
 * [HLDM/OpenAG](#half-life-multiplayer--openag)
 * [Counter-Strike 1.6](#counter-strike-16)
 * [Opposing Force](#opposing-force)
-* [Scripted Sequences](#2-scripted-sequences)
+* [Scripted Sequences](#2-scripted-sequences-bxt)
   * [Test Chamber](#test-chamber-a)
   * [Power Up](#power-up-a)
   * [Apprehension](#apprehension)
