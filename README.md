@@ -262,7 +262,6 @@ bind 9 +back
 bind 0 testchamber
 ```
 Video guide: [link](https://youtu.be/rtkwF-nAP4s)
-
 How to use: Stay on the left corner between cart cage and wall, when the cage starts to decend, follow the steps. Must be done within these angles: **pitch 30~40, yaw 125.05 ~ .09**
 
 1. press 0
@@ -310,6 +309,7 @@ alias tc9 "w 40;-forward"
 bind 9 move
 bind 0 testchamber 
 ```
+Video guide: [link](https://www.youtube.com/watch?v=IkZ4wWKrLVg)
 How to use: Stay on the left corner between cart cage and wall, when the cage starts to decend, follow the steps. It helps if you have `developer 1` to see the level change being triggered. Must be done within these angles: **pitch 30~40, yaw 136.51 ~ .40**
 
 1. 0, 9, 0, 9, 0, 9, 0, 9, 0, 9, 0, 9, 0, 9, 0
@@ -324,7 +324,8 @@ After touching the level change trigger up there you may continue:
 ```
 alias puskip "-jump;-moveright;-moveleft;speak fvox/power_level_is;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;cl_pitchdown 180;cl_pitchup -179;w 30;cl_pitchup -30;cl_pitchdown 31;wait;cl_pitchup 89;cl_pitchdown 89;w 10;+use;w 11;-use;+jump;wait;-jump"
 ```
-How to use: TODO
+How to use: [link](https://www.youtube.com/watch?v=IkZ4wWKrLVg)
+Example: `bind g puskip`
 
 #### Power Up B
 *Facing forward, no object boost.*
@@ -383,7 +384,8 @@ How to use: ???
 ```
 alias faf "save quick;speak fvox/power_level_is.beep._comma.beep._comma.beep._comma.beep;-moveright;-moveleft;-duck;weapon_crowbar;+attack;w 500;weapon_handgrenade;w 40;cl_pitchdown 180;cl_pitchup -179;w 40;cl_pitchup 89.999;cl_pitchdown 89.999;cl_pitchup -40;cl_pitchdown 40.001;w 30;-attack;w 4;+jump;+duck;wait;-jump;-duck;cl_pitchup 89;cl_pitchdown 89;w 61"
 ```
-How to use: TODO
+Video guide: [link](https://www.youtube.com/watch?v=E4h4jmzd-gI)
+Example: `bind g faf`
 
 #### Forget About Freeman B
 *This version uses a smg nade to scare the vortigaunts off.*
@@ -391,13 +393,13 @@ How to use: TODO
 alias faf "w 400;smg;w 1;weapon_handgrenade;w 10;+attack;w 50;cl_pitchdown 180;cl_pitchup -179;w 40;cl_pitchup 89.999;cl_pitchdown 89.999;cl_pitchup -40;cl_pitchdown 40.001;w 30;-attack;w 4;+jump;+duck;w 1;-jump;-duck;cl_pitchup 89.999;cl_pitchdown 90;w 61"
 alias smg "cl_pitchdown 180;cl_pitchup -179;w 1;+attack2;w 1;cl_pitchup 89;cl_pitchdown 89;-attack2"
 ```
-How to use: link soon
+How to use: same as A version but cook the grenade and switch to the SMG.
 
 #### Interloper
 ```
 alias in_dboost "-forward;cl_pitchdown 89;cl_pitchup -89;-attack;w;+duck;+jump;weapon_9mmAR;w 45;cl_pitchdown 32;cl_pitchup -32;+attack2;w 10;-duck;-jump;-attack2;cl_pitchup 89;cl_pitchdown 89;force_centerview;weapon_gauss"
 ```
-How to use: link soon
+Video guide: [link](https://www.youtube.com/watch?v=v3zxn_-jyec)
 
 ### 3. Jumpbugs BXT
 FPS values used are pre-steampipe, if `version` in your console outputs `Exe build: [...]` from 2013 or later, subtract 0.5 fps from `fps_max` values within the script in order to work.\
