@@ -230,13 +230,12 @@ Example `bind mouse5 +m249`
 #### Throwing nades below the door on "Friendly Fire"
 *Also works on They Hunger 1.*
 ```
-alias door "fps_max 19.5;cl_pitchdown 60.5;cl_pitchup -60.5;+duck;w 5;fps_max 19.5;+attack;w;-attack;w 25;+attack;w;-attack;w 15;fps_max 99.5;-duck;cl_pitchup 89;cl_pitchdown 89"
+alias door "fps_max 20;cl_pitchdown 60.5;cl_pitchup -60.5;+duck;w 5;fps_max 19.5;+attack;w;-attack;w 25;+attack;w;-attack;w 15;fps_max 100;-duck;cl_pitchup 89;cl_pitchdown 89"
 ```
 Example: `bind g door`
 
-### 2. Scripted Sequences
-All sequences require Bunnymod XT [link](https://github.com/YaLTeR/BunnymodXT) and must be done at stable 100 fps, if your computer struggles to keep up, scripts will fail. Check possible solutions on the wiki [link](https://github.com/parklez/Half-Life-Scripts/wiki). For scripts requiring angles, use `bxt_hud_viewangles 1`.\
-Tip: In case something goes wrong, `exec userconfig.cfg` and try again.
+### 2. Scripted Sequences BXT
+All scripts must be done at 100 fps (check using `net_graph 1`) and for those requiring angles, use `bxt_hud_viewangles 1`. Issues are likely related to framerate, so please check the [wiki](https://github.com/parklez/Half-Life-Scripts/wiki) for possible solutions!
 
 #### Test Chamber A
 *This version is currently NOT allowed by speedrun.com/hl1 rules.*
@@ -261,7 +260,7 @@ bind 8 +moveright
 bind 9 +back
 bind 0 testchamber
 ```
-Video guide: [link](https://youtu.be/rtkwF-nAP4s)
+Video guide: [link](https://youtu.be/rtkwF-nAP4s)\
 How to use: Stay on the left corner between cart cage and wall, when the cage starts to decend, follow the steps. Must be done within these angles: **pitch 30~40, yaw 125.05 ~ .09**
 
 1. press 0
@@ -309,7 +308,7 @@ alias tc9 "w 40;-forward"
 bind 9 move
 bind 0 testchamber 
 ```
-Video guide: [link](https://www.youtube.com/watch?v=IkZ4wWKrLVg)
+Video guide: [link](https://www.youtube.com/watch?v=IkZ4wWKrLVg)\
 How to use: Stay on the left corner between cart cage and wall, when the cage starts to decend, follow the steps. It helps if you have `developer 1` to see the level change being triggered. Must be done within these angles: **pitch 30~40, yaw 136.51 ~ .40**
 
 1. 0, 9, 0, 9, 0, 9, 0, 9, 0, 9, 0, 9, 0, 9, 0
@@ -324,7 +323,7 @@ After touching the level change trigger up there you may continue:
 ```
 alias puskip "-jump;-moveright;-moveleft;speak fvox/power_level_is;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;cl_pitchdown 180;cl_pitchup -179;w 30;cl_pitchup -30;cl_pitchdown 31;wait;cl_pitchup 89;cl_pitchdown 89;w 10;+use;w 11;-use;+jump;wait;-jump"
 ```
-How to use: [link](https://www.youtube.com/watch?v=IkZ4wWKrLVg)
+How to use: [link](https://www.youtube.com/watch?v=IkZ4wWKrLVg)\
 Example: `bind g puskip`
 
 #### Power Up B
@@ -332,7 +331,7 @@ Example: `bind g puskip`
 ```
 alias puskip "speak fvox/power_level_is;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;w 100;speak fvox/beep;w 50"
 ```
-How to use: link soon
+How to use: Walk forward and activate the script as you walk across the level change trigger, grab the tripmines and wait against the wall.
 
 #### Apprehension
 ```
@@ -384,7 +383,7 @@ How to use: ???
 ```
 alias faf "save quick;speak fvox/power_level_is.beep._comma.beep._comma.beep._comma.beep;-moveright;-moveleft;-duck;weapon_crowbar;+attack;w 500;weapon_handgrenade;w 40;cl_pitchdown 180;cl_pitchup -179;w 40;cl_pitchup 89.999;cl_pitchdown 89.999;cl_pitchup -40;cl_pitchdown 40.001;w 30;-attack;w 4;+jump;+duck;wait;-jump;-duck;cl_pitchup 89;cl_pitchdown 89;w 61"
 ```
-Video guide: [link](https://www.youtube.com/watch?v=E4h4jmzd-gI)
+Video guide: [link](https://www.youtube.com/watch?v=E4h4jmzd-gI)\
 Example: `bind g faf`
 
 #### Forget About Freeman B
@@ -393,7 +392,7 @@ Example: `bind g faf`
 alias faf "w 400;smg;w 1;weapon_handgrenade;w 10;+attack;w 50;cl_pitchdown 180;cl_pitchup -179;w 40;cl_pitchup 89.999;cl_pitchdown 89.999;cl_pitchup -40;cl_pitchdown 40.001;w 30;-attack;w 4;+jump;+duck;w 1;-jump;-duck;cl_pitchup 89.999;cl_pitchdown 90;w 61"
 alias smg "cl_pitchdown 180;cl_pitchup -179;w 1;+attack2;w 1;cl_pitchup 89;cl_pitchdown 89;-attack2"
 ```
-How to use: same as A version but cook the grenade and switch to the SMG.
+How to use: same as A version but cook the grenade and switch to the SMG before activating.
 
 #### Interloper
 ```
