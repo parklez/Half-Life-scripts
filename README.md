@@ -6,9 +6,14 @@ Special thanks to nin_talal, vitosnatios1 and YaLTeR.
 
 ### How to Install
 1. Inject Bunnymod XT [link](https://github.com/YaLTeR/BunnymodXT)
-2. Create a `userconfig.cfg` in your mod dir (valve, valve_WON, gearbox_WON, cstrike, etc)
+2. Create a `userconfig.cfg` in your mod dir (found in the "Half-Life" folder):
+- Half-Life Steam (or in case you want to use it across mods) - `valve`
+- Half-Life WON - `valve_WON` 
+- Opposing Force WON - `gearbox_WON`
+- Counter-Strike 1.6 - `cstrike`
 3. Copy and paste the script code into `userconfig.cfg` (including a bind of your choice, check availability [here](https://github.com/parklez/Half-Life-Scripts/wiki/Keyboard-Mouse-Keys)) using notepad and save.
 4. In-game open the console and type `exec userconfig.cfg`
+5. Please carefully read instructions and the wiki page if this if your first time scripting!
 
 ### Issues and Help
 **Please visit the [Wiki page](https://github.com/parklez/Half-Life-Scripts/wiki) for helpful information on scripting, performance tips and common issues!**
