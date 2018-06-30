@@ -6,7 +6,7 @@ Special thanks to nin_talal, vitosnatios1 and YaLTeR.
 
 ### How to Install
 1. Inject Bunnymod XT [link](https://github.com/YaLTeR/BunnymodXT)
-2. Create a `userconfig.cfg` in your mod dir (found in the "Half-Life" folder):
+2. Create a `userconfig.cfg` in your mod dir of choice (found inside "Half-Life"):
 - Half-Life Steam (or in case you want to use it across mods) - `valve`
 - Half-Life WON - `valve_WON` 
 - Opposing Force WON - `gearbox_WON`
