@@ -313,7 +313,7 @@ alias tc9 "w 40;-forward"
 bind 9 move
 bind 0 testchamber 
 ```
-Video guide: [link](https://www.youtube.com/watch?v=IkZ4wWKrLVg)\
+Video guide: [link](https://www.youtube.com/watch?v=iMpr5stxsnM)\
 How to use: Stay on the left corner between cart cage and wall, when the cage starts to decend, follow the steps. It helps if you have `developer 1` to see the level change being triggered. Must be done within these angles: **pitch 30~40, yaw 136.51 ~ .40**
 
 1. 0, 9, 0, 9, 0, 9, 0, 9, 0, 9, 0, 9, 0, 9, 0
