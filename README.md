@@ -341,7 +341,7 @@ How to use: Walk forward and activate the script as you walk across the level ch
 #### Power Up C
 *Facing forward, with object boost!*
 ```
-alias puskip "weapon_shotgun;-jump;-moveright;-moveleft;w 350;obbo800;+attack2;wait;-attack2;+duck;w 28;-duck"
+alias puskip "weapon_shotgun;-jump;-moveright;-moveleft;w 350;+use;w 12;-use;+jump;wait;-jump;+attack2;wait;-attack2;+duck;w 28;-duck"
 ```
 Video guide: [link](https://clips.twitch.tv/PuzzledTangentialClipsdadRickroll)
 
