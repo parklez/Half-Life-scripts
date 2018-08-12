@@ -338,6 +338,13 @@ alias puskip "speak fvox/power_level_is;w 100;speak fvox/beep;w 100;speak fvox/b
 ```
 How to use: Walk forward and activate the script as you walk across the level change trigger, grab the tripmines and wait against the wall.
 
+#### Power Up C
+*Facing forward, with object boost!*
+```
+alias puskip "weapon_shotgun;-jump;-moveright;-moveleft;w 350;obbo800;+attack2;wait;-attack2;+duck;w 28;-duck"
+```
+Video guide: [link](https://clips.twitch.tv/PuzzledTangentialClipsdadRickroll)
+
 #### Apprehension
 ```
 alias captured "ct1"
