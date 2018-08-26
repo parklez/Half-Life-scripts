@@ -415,7 +415,7 @@ Video guide: [link](https://www.youtube.com/watch?v=v3zxn_-jyec)\
 Example: `bind mouse5 in_dboost`
 
 ### 3. Jumpbugs BXT
-FPS values used are pre-steampipe, if `version` in your console outputs `Exe build: [...]` from 2013 or later, subtract 0.5 fps from `fps_max` values within the script in order to work.\
+FPS values used are pre-steampipe, if `version` in your console outputs `Exe build: [...]` from 2013 or later, subtract 0.5 fps from `fps_max` values within the script in order to work. Those ending with *_steampipe.cfg already take that in count.\
 Spreadsheet by Jukspa [link](https://docs.google.com/spreadsheets/d/1AREhZEdayLHF6bJpSCtpFVtM-foPVs6e8nHFuvAXsPw/edit?usp=sharing)
 
 How to use:
