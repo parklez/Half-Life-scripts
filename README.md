@@ -1,12 +1,12 @@
-# GoldSrc Scripts
-
-This is a table of scripts for GoldSrc games. For greater compatibility, Bunnymod XT's *'bxt_append'* and *'w'* functions are used. Scripts with "BXT" mean that they require this program to function.
+![banner](pictures/banner.jpg)
+## Table of scripts for GoldSrc (Half-Life's engine) games.
+For greater compatibility, Bunnymod XT's *'bxt_append'* and *'w'* functions are used. Scripts with "BXT" mean that they require this program to function.
 
 Special thanks to nin_talal, vitosnatios1 and YaLTeR.
 
-### How to Install
+# How to use 💡
 1. Inject Bunnymod XT [link](https://github.com/YaLTeR/BunnymodXT)
-2. Create a `userconfig.cfg` in your mod dir of choice (found inside "Half-Life"):
+2. Create `userconfig.cfg` inside the mod dir of choice (found inside "Half-Life"):
 - Half-Life Steam (or in case you want to use it across mods) - `valve`
 - Half-Life WON - `valve_WON` 
 - Opposing Force WON - `gearbox_WON`
@@ -15,10 +15,10 @@ Special thanks to nin_talal, vitosnatios1 and YaLTeR.
 4. In-game open the console and type `exec userconfig.cfg`
 5. Please carefully read instructions and the wiki page if this if your first time scripting!
 
-### Issues and Help
+# Issues and Help 📢
 **Please visit the [Wiki page](https://github.com/parklez/Half-Life-Scripts/wiki) for helpful information on scripting, performance tips and common issues!**
 
-### Table of Contents
+# Table of Contents 📝
 * [Movement](#1-movement--misc)
   * [Bunnyhop/Autojump](#bunnyhop-bxt)
   * [Duckroll/Duck Spam](#duckroll-bxt)
@@ -40,10 +40,13 @@ Special thanks to nin_talal, vitosnatios1 and YaLTeR.
   * [Interloper](#interloper)
 * [Scripted Jumpbugs](#3-jumpbugs-bxt)
 
-### 1. Movement & Misc
+## 1. Movement & Misc
 
 #### Bunnyhop BXT
-*Use BunnymodXT's **"bxt_autojump 1"** instead.*
+*Use BunnymodXT's **"bxt_autojump 1"** instead.* 💡
+<details><summary>Click here to view script</summary>
+<p>
+
 ```
 alias +bhop "alias _zspecial @bhop;@bh1"
 alias -bhop "alias _zspecial;-jump"
@@ -53,9 +56,14 @@ alias @bh3 "-jump;alias @bhop @bh4;bxt_append _zspecial"
 alias @bh4 "w;alias @bhop @bh1;bxt_append _zspecial"
 ```
 Example: `bind space +bhop`
+</p>
+</details>
 
 #### Duckroll BXT
-*For optimal movement consider using **"+bxt_tas_ducktap"***
+*Use BunnymodXT's **"+bxt_tas_ducktap"** instead.* 💡
+<details><summary>Click here to view script</summary>
+<p>
+
 ```
 alias +duckroll "alias _zspecial @duck;@dr1"
 alias -duckroll "alias _zspecial;-duck"
@@ -65,6 +73,8 @@ alias @dr3 "-duck;alias @duck @dr4;bxt_append _zspecial"
 alias @dr4 "w;alias @duck @dr1;bxt_append _zspecial"
 ```
 Example: `bind mouse3 +duckroll`
+</p>
+</details>
 
 #### Use Spam BXT
 ```
@@ -97,7 +107,7 @@ alias obboshoot "+use;w 10;-use;+attack2;+jump;w;-attack2;-jump"
 ```
 Example: `bind mouse5 obboshoot`
 
-How to use: While facing the object, move either left or right as you activate this script. Changing the number after 'w' will affect the boost, values around 6 to 16 are good.
+How to use: While facing the box, walk forward and press mouse5. Changing the number after 'w' will affect the boost, values around 6 to 16 are good.
 
 #### Gauss 180° Boosting
 ```
@@ -109,7 +119,7 @@ alias -tau "_taubo;alias _taubo"
 Example: `bind mouse5 +tau`
 
 #### Quickgauss 180° Steam BXT
-*Important note: quickgauss is a trick ONLY possible on the steam version of the game, NOT WON.*
+*Important note: quickgauss is a trick ONLY possible on the **Steam** version of the game, **NOT WON.*** 💡
 
 How to use:
 1. Copy `quickgauss.cfg` to your `valve` dir.
@@ -139,7 +149,7 @@ alias smgboost "cl_pitchup -89;cl_pitchdown 89;w;+attack2;+jump;w;-attack2;-jump
 How to use: Crouch for a few frames and activate it, this will boost the player vertically, useful on surface tension.\
 Example: `bind g smgboost`
 
-### Half-Life Multiplayer / OpenAG
+## Half-Life Multiplayer / OpenAG
 
 #### Fast Zoom Crossbow
 *You may increase the wait count based on latency.*
@@ -189,7 +199,7 @@ alias -us "alias us;-use"
 ```
 Example: `bind e +us`
 
-### Counter-Strike 1.6
+## Counter-Strike 1.6
 
 #### Fast Switch
 ```
@@ -214,7 +224,7 @@ alias "@fr" "+left;+moveleft;w;-left;-moveleft;+right;+moveright;w;-right;-mover
 ```
 Example: `bind f +fr`
 
-### Opposing Force
+## Opposing Force
 
 #### M249 180° Automatic BXT
 *Must be used at 100 fps, preferably in small bursts.*
@@ -232,25 +242,32 @@ alias @m249_8 "w;alias @m249 @m249_1;bxt_append _zspecial"
 ```
 Example `bind mouse5 +m249`
 
-#### Throwing nades below the door on "Friendly Fire"
+#### Throwing nades under the door on "Friendly Fire"
 *Also works on They Hunger 1.*
 ```
 alias door "fps_max 20;cl_pitchdown 60.5;cl_pitchup -60.5;+duck;w 5;fps_max 19.5;+attack;w;-attack;w 25;+attack;w;-attack;w 15;fps_max 100;-duck;cl_pitchup 89;cl_pitchdown 89"
 ```
 Example: `bind g door`
 
-### 2. Scripted Sequences BXT
-All scripts must be done at 100 fps (check using `net_graph 1`) and for those requiring angles, use `bxt_hud_viewangles 1`. Issues are likely related to framerate, so please check the [wiki](https://github.com/parklez/Half-Life-Scripts/wiki) for possible solutions!
+## 2. Scripted Sequences BXT
+**All scripts must be done at 100 fps** (check using `net_graph 1`) and for those requiring angles, use `bxt_hud_viewangles 1`. Issues are likely related to framerate, so please check the [wiki](https://github.com/parklez/Half-Life-Scripts/wiki) for possible solutions! 💡
 
 #### Test Chamber A
 *This version is currently NOT allowed by speedrun.com/hl1 rules.*
+<details><summary>Click here to view script</summary>
+<p>
+
 ```
 alias testchamber "+moveright;+back;w 30;+use;w 4;-use;w 40;-moveright;-back;w 100;+left;w 6;-left;wait;+moveright;w 22;+use;w 11;-use;+duck;wait;-duck;-moveright;w 40;+back;w 13;-back"
 ```
+
 How to use: Stay on the left corner between cart cage and wall, after the cart fully arrives, activate it. Must be done within these angles: **pitch 30~40, yaw 125.05 ~ .09**
+</p>
+</details>
+
 
 #### Test Chamber B
-*This version is allowed, functions like A.*
+*Consistent/simple version.*
 ```
 alias testchamber "tc1"
 alias tc1 "w 100;w 100;alias testchamber tc2"
@@ -414,17 +431,20 @@ alias in_dboost "-forward;cl_pitchdown 89;cl_pitchup -89;-attack;w;+duck;+jump;w
 Video guide: [link](https://www.youtube.com/watch?v=v3zxn_-jyec)\
 Example: `bind mouse5 in_dboost`
 
-### 3. Jumpbugs BXT
-FPS values used are pre-steampipe, if `version` in your console outputs `Exe build: [...]` from 2013 or later, subtract 0.5 fps from `fps_max` values within the script in order to work. Those ending with *_steampipe.cfg already take that in count.\
-Spreadsheet by Jukspa [link](https://docs.google.com/spreadsheets/d/1AREhZEdayLHF6bJpSCtpFVtM-foPVs6e8nHFuvAXsPw/edit?usp=sharing)
+## 3. Jumpbugs BXT
+Jumpbugs basically cancel fall damage by jumping and unducking 2 units above the ground, the scripts will time this while allowing the player to move freely. Spreadsheet by Jukspa [link](https://docs.google.com/spreadsheets/d/1AREhZEdayLHF6bJpSCtpFVtM-foPVs6e8nHFuvAXsPw/edit?usp=sharing)
 
-How to use:
+#### Before anything:
+- If `version` in your console outputs `Exe build: [...]` from 2013 or later, subtract 0.5 fps from `fps_max` values within the script in order to work.
+- Scripts ending with *_steampipe.cfg already take that in count.
+
+#### How to use 💡
 1. Download this repository clicking [here](https://github.com/parklez/Half-Life-Scripts/archive/master.zip) then move the script you want inside the mod dir (valve, valve_WON, gearbox_WON, etc).
 2. Load the script you want: `bind F2 "exec jb_example.cfg"` OR type in console `exec jb_example.cfg`
 3. Make a bind for "+jumpbug": `bind mouse4 +jumpbug`
 4. Hold down "+jumpbug" until it's over, you can move/attack freely. The script jumps and jumpbugs automatically.
 
-**Video showcase for most jumpbugs: [link](https://youtu.be/dxPG7A0w3aU)**
+**Video showcase for most jumpbugs: [Click here to watch](https://youtu.be/dxPG7A0w3aU)** 📺
 
 The table below shows where to execute each script. (Specific spots outlined in green)
 
