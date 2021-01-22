@@ -1,5 +1,5 @@
 ![banner](pictures/banner.jpg)
-## Table of scripts for GoldSrc (Half-Life's engine) games.
+# Table of scripts for GoldSrc (Half-Life's engine) games.
 For greater compatibility, Bunnymod XT's *'bxt_append'* and *'w'* functions are used. Scripts with "BXT" mean that they require this program to function.
 
 Special thanks to nin_talal, vitosnatios1 and YaLTeR.
