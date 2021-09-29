@@ -15,6 +15,8 @@ Special thanks to nin_talal, vitosnatios1 and YaLTeR.
 4. In-game open the console and type `exec userconfig.cfg`
 5. Please carefully read instructions and the wiki page if this if your first time scripting!
 
+💡 My very own configs for learning/copying. I press F3-F10 during certain spots in the run to change what my 'G'/'mouse4'/'mouse5' do. [scripts.cfg](https://github.com/parklez/userconfig/tree/master/Half-Life/valve_WON) - [my run on youtube](https://www.youtube.com/watch?v=4GNDLhLw-cA)
+
 # Issues and Help 📢
 **Please visit the [Wiki page](https://github.com/parklez/Half-Life-Scripts/wiki) for helpful information on scripting, performance tips and common issues!**
 
@@ -60,6 +62,7 @@ Example: `bind space +bhop`
 </details>
 
 #### Duckroll BXT
+Also known as "Duck Spam", might be useful for boosting in triggers such as in the toxic waste in HL1.\
 *Use BunnymodXT's **"+bxt_tas_ducktap"** instead.* 💡
 <details><summary>Click here to view script</summary>
 <p>
@@ -108,6 +111,14 @@ alias obboshoot "+use;w 10;-use;+attack2;+jump;w;-attack2;-jump"
 Example: `bind mouse5 obboshoot`
 
 How to use: While facing the box, walk forward and press mouse5. Changing the number after 'w' will affect the boost, values around 6 to 16 are good.
+
+#### Residue Processing
+```
+alias rp_obbo "+use;w 15;-use"
+```
+Example: `bind mouse5 rp_obbo`\
+Video guide: [link](https://youtu.be/CQFfICQe8ug?t=7)\
+How to use: while crouched, move right while facing the floating object until you reach max speed (106) then press mouse5. Hold jump after hitting your head inside the pipe.
 
 #### Gauss 180° Boosting
 ```
@@ -391,6 +402,13 @@ How to use: Lower fps to 8 and do step 1 when you see the "loading" for the two 
 8. w+7
 9. w+7
 10. w+7
+
+#### Box jump
+```
+bind 7 "spk fvox/blip.blip.blip.blip"
+```
+How to use: Save/load after cutscene ends, when screen fades again press 7.\
+Video guide: [link](https://www.youtube.com/watch?v=wxav_8hvHqY)
 
 #### Surface Tension Valve
 ```
